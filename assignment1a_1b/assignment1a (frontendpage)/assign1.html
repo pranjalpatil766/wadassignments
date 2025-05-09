@@ -1,128 +1,85 @@
 <!DOCTYPE html>
-<!-- This line tells the browser that this is an HTML5 document -->
-
 <html lang="en">
-<!-- Starts the HTML page and sets the language to English -->
-
 <head>
   <meta charset="UTF-8" />
-  <!-- Sets the character encoding to UTF-8 to support all languages and symbols -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Makes the webpage responsive (adjusts layout for mobile, tablet, desktop) -->
-
   <title>Admin Dashboard</title>
-  <!-- This is the title that appears in the browser tab -->
-
-  <!-- This line includes Bootstrap 5 CSS from the internet (CDN = Content Delivery Network) -->
-  <!-- Bootstrap is a CSS framework that helps you design websites faster with ready-made classes -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
   <style>
-    /* Whole body of the web page */
     body {
-      display: flex; /* This places child elements (sidebar + content) side-by-side */
-      min-height: 100vh; /* 100% of the screen height (vh = viewport height) */
+      display: flex;
+      min-height: 100vh;
     }
 
-    /* Sidebar section (left side panel) */
     .sidebar {
-      width: 200px; /* Fixed width for sidebar */
-      background: darkslategray; /* Background color of the sidebar */
-      color: white; /* Text color inside sidebar */
+      width: 200px;
+      background: darkslategray;
+      color: white;
     }
 
-    /* This targets all anchor (<a>) tags inside the sidebar */
     .sidebar a {
-      display: block; /* Makes the entire link area clickable like a button */
-      padding: 10px; /* Adds space inside each link (top, right, bottom, left) */
-      color: white; /* Makes the text color white */
-      text-decoration: none; /* Removes the underline from links */
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
     }
 
-    /* When mouse hovers over sidebar links */
     .sidebar a:hover {
-      background: gray; /* Changes background color to gray when hovered */
+      background: gray;
     }
 
-    /* The main content area (right side) */
     .content {
-      flex: 1; /* Takes up all remaining horizontal space (after sidebar width) */
-      padding: 20px; /* Adds space inside the content area */
+      flex: 1;
+      padding: 20px;
     }
 
-    /* Style for the cards that show stats */
     .card {
-      text-align: center; /* Centers the text inside each card */
-      padding: 20px; /* Adds space inside the card */
-      margin-bottom: 20px; /* Adds space below each card so they don't touch */
-      box-shadow: 2px 2px 5px lightgray; /* Adds a light shadow around the card for depth */
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 5px lightgray;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Sidebar Section: vertical menu on the left -->
   <div class="sidebar d-flex flex-column">
-    <!-- d-flex: makes it a flexbox container -->
-    <!-- flex-column: stacks children vertically (column-wise) -->
-
-    <!-- Sidebar title -->
     <h4 class="text-white text-center py-3">Admin Panel</h4>
-    <!-- text-white: makes text white -->
-    <!-- text-center: centers the text horizontally -->
-    <!-- py-3: adds padding on top and bottom (y-axis) -->
-
-    <!-- Links in sidebar -->
-    <a href="#">Dashboard</a>  <!-- Main dashboard link -->
-    <a href="#">Students</a>   <!-- Link to students section -->
-    <a href="#">Courses</a>    <!-- Link to courses section -->
-    <a href="#">Results</a>    <!-- Link to results section -->
-    <a href="#">Settings</a>   <!-- Link to settings -->
+    <a href="#">Dashboard</a>
+    <a href="#">Students</a>
+    <a href="#">Courses</a>
+    <a href="#">Results</a>
+    <a href="#">Settings</a>
   </div>
 
-  <!-- Main content area (right side) -->
   <div class="content">
-    <!-- Page title -->
     <h2 class="mb-4">Dashboard Overview</h2>
-    <!-- mb-4: adds bottom margin (space below title) -->
-
-    <!-- Cards row starts here -->
     <div class="row g-4">
-      <!-- row: Bootstrap class to create a horizontal row -->
-      <!-- g-4: adds space (gutters) between columns -->
-
-      <!-- First card (1 of 3): Total Students -->
       <div class="col-md-4">
-        <!-- col-md-4: Takes 4 columns out of 12 on medium (md) and larger screens -->
         <div class="card p-3 text-center">
-          <!-- p-3: padding inside the card -->
-          <!-- text-center: centers content -->
           <h5>Total Students</h5>
           <p class="fs-3 text-primary">1200</p>
-          <!-- fs-3: makes the font larger -->
-          <!-- text-primary: blue text (Bootstrap default color) -->
         </div>
       </div>
 
-      <!-- Second card: Courses -->
       <div class="col-md-4">
         <div class="card p-3 text-center">
           <h5>Courses</h5>
           <p class="fs-3 text-success">35</p>
-          <!-- text-success: green color text -->
         </div>
       </div>
 
-      <!-- Third card: Exams Scheduled -->
       <div class="col-md-4">
         <div class="card p-3 text-center">
           <h5>Exams Scheduled</h5>
           <p class="fs-3 text-danger">8</p>
-          <!-- text-danger: red color text -->
         </div>
       </div>
+    </div>
+  </div>
+</body>
+</html>
+
 
     </div> <!-- End of cards row -->
   </div> <!-- End of main content -->
